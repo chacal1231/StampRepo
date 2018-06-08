@@ -42,7 +42,7 @@ endif
 #
 
 # Define project name here
-PROJECT = ch
+PROJECT = gps
 
 # Imported source files
 CHIBIOS = ChibiOS

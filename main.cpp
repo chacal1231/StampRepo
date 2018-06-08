@@ -114,16 +114,15 @@ int main(void) {
   halInit();
   chSysInit();
 
-  //Start Serial.
+  //Start Serial mpu.
   sdStart(&SD2, NULL);
+  //start serial imx
   sdStart(&SD1, NULL);
   //Start I2C
   I2CInit();
   // Creates threads
   chThdCreateStatic(waThread1, sizeof(waThread1), NORMALPRIO, Thread1, NULL);
   chThdCreateStatic(AreaGPS, sizeof(AreaGPS), ABSPRIO, GPSThread, NULL);
-
-  
 
   return(0);
 }
